@@ -42,7 +42,7 @@ START:
         MOV BYTE PTR DS:[00A0H],'o'
         MOV BYTE PTR DS:[00A2H],'O'
         MOV BYTE PTR DS:[00A4H],'o'
-        MOV BYTE PTR DS:[0142H],'o'
+        MOV BYTE PTR DS:[0142H],'O'
 
         HLT
         HLT
