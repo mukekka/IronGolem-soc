@@ -2,16 +2,10 @@ ASSUME CS:CODE
 CODE SEGMENT
 START:
         MOV DX,03D4H
-        MOV AL,0FH
+        MOV AL,0AH
         OUT DX,AL
-        MOV AL,040H
         INC DX
-        OUT DX,AL
-        DEC DX
-        MOV AL,0EH
-        OUT DX,AL
-        MOV AL,01
-        INC DX
+        MOV AL,20H
         OUT DX,AL
 
         MOV AL,00110110B
@@ -23,9 +17,9 @@ START:
 
         MOV AX,0B800H
         MOV DS,AX
-        MOV BYTE PTR DS:[0002H],'#'
+        MOV BYTE PTR DS:[0002],'#'
 
-        STI
+        STI 
 
         REPLAY:
 
@@ -33,7 +27,6 @@ START:
         MOV BYTE PTR DS:[00A2H],'o'
         MOV BYTE PTR DS:[00A4H],'O'
         MOV BYTE PTR DS:[0142H],'o'
-
         HLT
         HLT
         HLT
@@ -43,7 +36,6 @@ START:
         MOV BYTE PTR DS:[00A2H],'O'
         MOV BYTE PTR DS:[00A4H],'o'
         MOV BYTE PTR DS:[0142H],'O'
-
         HLT
         HLT
         HLT
@@ -55,4 +47,3 @@ START:
 
 CODE ENDS
 END START
-
